@@ -1,0 +1,34 @@
+/* use newest foundation package managed by bower */
+@import 'bower_components/foundation/scss/normalize';
+@import 'bower_components/foundation/scss/foundation';
+
+/*@import 'foundation.scss';
+@import 'settings.scss';*/
+
+div.logo {
+	float: left;
+}
+
+div#main {
+	margin:30px;
+}
+
+table.applications td.td-center {
+	text-align: center;
+}
+
+div.application-config {
+	/*width: 1px;*/
+}
+
+div.content.buttons {
+	margin: 16px;
+}
+
+div.header {
+	margin-bottom: 30px;
+}
+
+div.switch.protection {
+	left:10px;
+}

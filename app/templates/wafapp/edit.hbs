@@ -1,0 +1,67 @@
+<div class="header wafappedit">
+  <h4> Application {{title}} </h4>
+</div>
+
+<div class="content wafappedit large-7 medium-8 columns">
+<form data-abide>
+  <div class="row">
+	<div class="large-6 columns">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Name</label>
+        </div>
+        <div class="small-9 columns">
+          {{input value=model.name}}
+          <!-- <input type="email" value={{model.name}} pattern="[a-z]$" required>
+          <small class="error">Too long.</small> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+	<div class="large-6 columns">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Capability</label>
+        </div>
+        <div class="small-9 columns">
+          {{input value=model.capability readonly=true}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+	<div class="large-6 columns">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Mode</label>
+        </div>
+        <div class="small-9 switch protection">
+          {{#if model.protected}}
+             <input id="applicationProtected" type="checkbox" checked {{action 'changeProtectedState'}}>
+		      {{else}}
+              <input id="applicationProtected" type="checkbox" {{action 'changeProtectedState'}}>
+          {{/if}}
+		      <label for="applicationProtected"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <div class="row">
+        <div class="small-3 columns">
+          <label for="right-label" class="right inline">Charset</label>
+        </div>
+        <div class="small-9 columns">
+        {{view "select" content=charsets value=model.default_charset}}
+        </div>
+        </div>
+    </div>
+  </div>
+  <div class="content buttons">
+    <a href="#" class="button small" {{action 'saveRecords'}}>Save</a>
+    <a href="#" class="button secondary small" {{action 'revertRecords'}}>Revert</a>
+  </div>
+</form>
+</div>

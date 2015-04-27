@@ -1,0 +1,31 @@
+<h4>Applications</h4>
+<table class="applications">
+  <thead>
+    <tr>
+      <th width="200">Application Name</th>
+      <th>Attack Status</th>
+      <th>Traffic Status</th>
+    </tr>
+  </thead>
+  <tbody>
+  {{#each application in model}}
+    <tr>
+      <td>{{#link-to 'wafapp.edit' application}}{{application.name}}{{/link-to}}</td>
+      <td>
+        {{#if application.protected}}
+          Protection
+        {{else}}
+          Detection
+        {{/if}}
+      </td>
+      <td class="td-center">
+        {{#if application.block_traffic}}
+          <img src="assets/images/false.png" alt="enabled">
+        {{else}}
+          <img src="assets/images/true.png" alt="disabled">
+        {{/if}}
+      </td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>

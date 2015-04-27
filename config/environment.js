@@ -25,6 +25,11 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+    // ENV.baseURL = '/frameworks/ember/gui2/dist/';
+    ENV.contentSecurityPolicy = {
+      'img-src': "'self' http://localhost:4200 http://0.0.0.0:4200 data:",
+      'style-src': "'self' 'unsafe-inline' http://localhost:4200 http://0.0.0.0:4200"
+    }
   }
 
   if (environment === 'test') {

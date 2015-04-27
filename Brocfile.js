@@ -2,7 +2,23 @@
 
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-var app = new EmberApp();
+var mergeTrees = require('broccoli-merge-trees');
+var pickFiles = require('broccoli-static-compiler');
+var assets = pickFiles('app/static/', {
+	srcDir: '/',
+	files: ['**/*'],
+	destDir: '/assets'
+});
+
+var app = new EmberApp(
+{
+  'ember-cli-foundation-sass': {
+    'modernizr': true,
+    'fastclick': true,
+    'foundationJs': 'all'
+  }
+}
+);
 
 // Use `app.import` to add additional libraries to the generated
 // output files.
@@ -17,4 +33,5 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+//module.exports = mergeTrees([app.toTree(), assets]);
 module.exports = app.toTree();
