@@ -1,7 +1,7 @@
 {
-  "name": "gui2",
+  "name": "ember-saf",
   "version": "0.0.0",
-  "description": "Small description for gui2 goes here",
+  "description": "emberjs - foundation 5 saf prototype",
   "private": true,
   "directories": {
     "doc": "doc",
