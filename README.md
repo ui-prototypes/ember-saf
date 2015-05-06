@@ -14,7 +14,7 @@
 * `cd ember-saf`
 * `npm install ember-cli --save` // local repo ember-cli update
 * `bower install`
-* `ember init` // please enter No on every step, to skip overwrite necessary settings
+* `ember init` // please enter No on every step, to skip overwrite settings
 * `ember serve`
 
 # REST Settings
