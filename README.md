@@ -1,53 +1,26 @@
 # Ember-saf
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+# Requirements
+* `sudo apt-get install git npm`
 
-## Prerequisites
+# Installation
 
-You will need the following things properly installed on your computer.
+### Global Installation
+* `sudo npm install -g ember-cli`
+* `sudo npm install -g bower`
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
-
-## Installation
-
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
+### Install Ember-SAF
+* `git clone https://github.com/ui-prototypes/ember-saf.git`
+* `cd ember-saf`
+* `npm install ember-cli --save` // local repo ember-cli update
 * `bower install`
+* `ember init` // please enter No on every step, to skip overwrite necessary settings
+* `ember serve`
 
-## Running / Development
+# REST Settings
+* edit `app/adapters/application.js` and insert token to auth on WAF RestAPI
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+# Troubleshooting
+* /usr/bin/env: node: No such file or directory
+ * ln -s /usr/bin/nodejs /usr/bin/node
 
