@@ -6,7 +6,6 @@
 # Installation
 
 ### Global Installation
-* `sudo npm install -g ember-cli`
 * `sudo npm install -g bower`
 
 ### Install Ember-SAF
@@ -19,6 +18,10 @@
 
 # REST Settings
 * edit `app/adapters/application.js` and insert token to auth on WAF RestAPI
+
+# Testing
+* `npm install phantomjs`
+* `ember test` // run headless via phantomjs web-stack
 
 # Troubleshooting
 * /usr/bin/env: node: No such file or directory
