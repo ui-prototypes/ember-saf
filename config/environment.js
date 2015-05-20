@@ -5,7 +5,8 @@ module.exports = function(environment) {
     modulePrefix: 'ember-saf',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'auto', //use this for real url routing
+    //locationType: 'hash', // use this for client side hashtag routing
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

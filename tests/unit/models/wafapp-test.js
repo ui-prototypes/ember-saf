@@ -9,7 +9,7 @@ test('wafapp is a valid ember-data Model', function(assert) {
 
 	// retrieves the DS.Store
 	var store = this.store();
-	// calls the factory for the DS.Model
+	// calls the factory for the DS.Model, and init with some demo data
 	var app = this.subject({block_traffic: true, name: 'foobar', 'protected': true});
 
 	assert.ok(app);

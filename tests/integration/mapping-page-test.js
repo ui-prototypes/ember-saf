@@ -3,7 +3,7 @@ import { module,  test } from 'qunit';
 import startApp from '../helpers/start-app';
 var App;
 
-module('home-page-test', {
+module('mapping-page-test', {
 	setup: function() {
 		App = startApp();
 	},
@@ -19,11 +19,18 @@ module('home-page-test', {
 	}
 });
 
-test('Should activate the home link', function(assert) {
+test('activate the mapping link', function(assert) {
+	assert.expect(1);
+	visit('/mapping').then(function() {
+		// pause test for debugging
+		// return pauseTest();
+		assert.equal(find('a:contains("Mapping")').hasClass("active"), true);
+	});
+});
+
+test('title is hyperguard', function(assert){
 	assert.expect(1);
 	visit('/').then(function() {
-		// pause test for debugging
-		//return pauseTest();
-		assert.equal(find('a:contains("Home")').hasClass("active"), true);
+		assert.equal(find('li.name a:first').text(), "Hyperguard");
 	});
 });

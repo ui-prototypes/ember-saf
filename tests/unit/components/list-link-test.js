@@ -20,6 +20,5 @@ test('it renders', function(assert) {
 
 test('check tag name', function(assert) {
 	assert.expect(1);
-
 	assert.equal('LI', this.$().prop('tagName'));
 });
